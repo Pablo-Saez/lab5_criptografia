@@ -8,7 +8,9 @@ RUN apt-get update && apt-get install -y apt-transport-https
 RUN useradd --create-home --shell /bin/bash test
 RUN echo 'test:test' | chpasswd
 # Actualiza el sistema y realiza la instalación de OpenSSH Server
-RUN apt-get update && apt-get install -y openssh-server
+RUN apt-get update && apt-get install -y openssh-server 
+RUN apt-get install -y openssh-client
+
 
 # Copia el archivo de configuración del servidor SSH
 # COPY sshd_config /etc/ssh/sshd_config

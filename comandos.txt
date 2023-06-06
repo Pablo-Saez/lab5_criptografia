@@ -2,3 +2,4 @@ sudo docker run -p 2222:22 -it ssh_server bash
 sudo docker build -t ssh_server .
 
 ubuntu version ->  lsb_release -a 
+service ssh restart
